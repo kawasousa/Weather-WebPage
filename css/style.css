@@ -51,6 +51,13 @@ body {
     cursor: pointer;
 }
 
+.form button:hover {
+    transition-duration: .5s;
+    border-radius: 1rem;
+    min-width: 4rem;
+    background-color: #6aacd0;
+}
+
 .form .form-input-container {
     display: flex;
 
