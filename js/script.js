@@ -30,7 +30,7 @@ const showWeatherData = async(city) => {
     cityElement.innerText = data.name;
     temperatureElement.innerText = data.temp;
     descriptionElement.innerText = data.weather[0].description;
-    weatherIconElement.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`)
+    weatherIconElement.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
     countryElement.setAttribute("src", apiCountryUrlStart + data.sys.country + apiCountryUrlFinish);
     temperatureElement.innerText = data.main.temp;
     humidityElement.innerText = data.main.humidity;
@@ -45,4 +45,12 @@ searchBtn.addEventListener("click", (event)=>{
     const city = cityInput.value;
 
     showWeatherData(city);
+})
+
+cityInput.addEventListener("keyup", (event) => {
+    if(event.code === "Enter"){
+        const city = event.target.value;
+        
+        showWeatherData(city);
+    }
 })
