@@ -20,8 +20,9 @@ body {
 
 .container {
     background-color: #5c54ed;
-    box-shadow: #0000003d 0px 3px 8px;
+    box-shadow: #0000003d 0 .20rem .5rem;
     padding: 2rem;
+    width: 27rem;
     color: #fdfdfd;
     border-radius: 1rem;
 }
@@ -34,18 +35,19 @@ body {
     padding: .8rem;
     border: none;
     flex: 1;
-    border-radius: 4px;
+    border-radius: .25rem;
 
 }
 
 .form button {
     padding: .8rem;
-    min-width: 50px;
-    margin-left: 8px;
+    min-width: 3rem;
+    margin-left: .5rem;
     background-color: #8dd0f5;
     color: #FFF;
     border: none;
-    border-radius: 4px;
+    transition-duration: .5s;
+    border-radius: .5rem;
     cursor: pointer;
 }
 
@@ -79,7 +81,7 @@ body {
 }
 
 #country {
-    width: 40px;
+    width: 2.5rem;
 }
 
 #description-container {
@@ -105,4 +107,10 @@ body {
     justify-content: center;
     border-right: .15rem solid #fff;
     margin-right: .6rem;
+}
+
+#no-city-info {
+    border-top: 1px solid #fff;
+    margin-top: 2rem;
+    padding-top: 1rem;
 }
