@@ -89,6 +89,10 @@ body {
     margin: .6rem 0;
 }
 
+#description::first-letter {
+    text-transform: capitalize;
+}
+
 #details-container {
     display: flex;
     align-items: center;
