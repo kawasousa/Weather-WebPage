@@ -36,7 +36,7 @@ const showWeatherData = async(city) => {
     humidityElement.innerText = data.main.humidity;
     windElement.innerText = data.wind.speed;
 
-    weatherData.removeAttribute("class");
+    weatherData.classList.remove("hide");
 };
 
 searchBtn.addEventListener("click", (event)=>{
