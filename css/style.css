@@ -78,6 +78,10 @@ body {
     margin: .6rem;
 }
 
+#country {
+    width: 40px;
+}
+
 #description-container {
     display: flex;
     justify-content: center;
