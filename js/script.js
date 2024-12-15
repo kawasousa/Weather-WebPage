@@ -37,13 +37,26 @@ const showWeatherData = async(city) => {
     windElement.innerText = data.wind.speed;
 
     weatherData.classList.remove("hide");
+    updatePageTitle(data.name);
+    updatePageIcon(weatherIconElement.getAttribute("src"));
 };
+
+const updatePageTitle = (city) => {
+    document.title = "Weather - " + city;
+}
+
+const updatePageIcon = (url) => {
+    let link = document.querySelector("link[rel='shortcut icon'");
+    if(link){
+        link.href = url;
+    }
+}
 
 searchBtn.addEventListener("click", (event)=>{
     event.preventDefault();
     
     const city = cityInput.value;
-
+    
     showWeatherData(city);
 })
 
